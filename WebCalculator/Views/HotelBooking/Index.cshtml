@@ -1,0 +1,29 @@
+﻿@model List<HotelBooking>;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Guest Name</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+        </tr>
+    </thead>
+    <tbody>  
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <th scope="row">@customer.Id</th>
+                <td>@customer.GuestName</td>
+                <td>@customer.DateStart</td>
+                <td>@customer.DateEnd</td>
+            </tr>
+        }
+    </tbody>
+</table>
